@@ -94,7 +94,7 @@
       </header>
       <section>
     <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>About me</h2>
-    <p style="margin:0">Ziang Cao is currently a graduate student in the School of Computer Science and Engineering at Nanyang Technological Unviersity, supervised by <a href="https://liuziwei7.github.io/">Prof. Ziwei Liu</a>. His research interests lie on the computer vision, deep learning, and 3D generation. <br> 
+    <p style="margin:0">Ziang Cao is currently a first-year PhD student in the College of Computer and Data Science in Nanyang Technological Unviersity, with <a href="https://www.mmlab-ntu.com/">MMLab@NTU</a>, supervised by <a href="https://liuziwei7.github.io/">Prof. Ziwei Liu</a>. His research interests lie on the computer vision, deep learning, and 3D generation. <br> 
    <h1> <h1>
  <hr>
 
@@ -105,6 +105,7 @@
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We study heterogeneity in the effect of immigrant labor supply on native wages in the United States using quasi-experimental variation induced by the Immigration Act of 1990. The Act quickly and substantially increased the number of immigrant workers in STEM occupations. Using CPS data, we find short-run policy effects of reduced wages for more substitutable workers but increased wages for more complementary workers. We analyze long-term effects of the policy using administrative earnings data and find smaller long-run effects. </p></div><br>
 -->
+     <p style="margin:0"> <b>[Jan. 2024] One paper (<a href="https://ziangcao0312.github.io/difftf_pages/">DiffTF</a>) is accepted by ICLR.</b> 
      <p style="margin:0"> <b>[Aug. 2023] One paper (<a href="https://github.com/vision4robotics/TCTrack">TCTrack++</a> ) is accepted by TPAMI.</b> 
     <p style="margin:0"> <b>[Mar. 2022] Two papers (<a href="https://arxiv.org/abs/2203.01885">TCTrack</a> and <a href="https://ai4ce.github.io/EgoPAT3D/">EgoPAT3D</a>) are accepted by CVPR2022.</b> 
     <p style="margin:0"> <b>[Feb. 2022] One paper is accepted by <a href="https://ieeexplore.ieee.org/abstract/document/9696362/">RA-L2022.</a></b> 
@@ -120,7 +121,38 @@
 
 
     <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Publications</h2>
-        
+ 
+
+<p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/pdf/2309.07920.pdf">Large-Vocabulary 3D Diffusion Model with Transformer</a> <br> <b>Ziang Cao</b>, Fangzhou Hong, Tong Wu, Liang Pan, Ziwei Liu. <i>ICLR</i>.  <br><button class="accordion"> 
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>Creating diverse and high-quality 3D assets with an automatic generative model is
+highly desirable. Despite extensive efforts on 3D generation, most existing works
+focus on the generation of a single category or a few categories. In this paper,
+we introduce a diffusion-based feed-forward framework for synthesizing massive
+categories of real-world 3D objects with a single generative model. Notably, there
+are three major challenges for this large-vocabulary 3D generation: a) the need
+for expressive yet efficient 3D representation; b) large diversity in geometry and
+texture across categories; c) complexity in the appearances of real-world objects.
+To this end, we propose a novel triplane-based 3D-aware Diffusion model with
+TransFormer, DiffTF, for handling challenges via three aspects. 1) Considering
+efficiency and robustness, we adopt a revised triplane representation and improve
+the fitting speed and accuracy. 2) To handle the drastic variations in geometry and
+texture, we regard the features of all 3D objects as a combination of generalized
+3D knowledge and specialized 3D features. To extract generalized 3D knowledge
+from diverse categories, we propose a novel 3D-aware transformer with shared
+cross-plane attention. It learns the cross-plane relations across different planes
+and aggregates the generalized 3D knowledge with specialized 3D features. 3)
+In addition, we devise the 3D-aware encoder/decoder to enhance the generalized
+3D knowledge in the encoded triplanes for handling categories with complex
+appearances. Extensive experiments on ShapeNet and OmniObject3D (over 200
+diverse real-world categories) convincingly demonstrate that a single DiffTF model
+achieves state-of-the-art large-vocabulary 3D object generation performance with
+large diversity, rich semantics, and high quality. Our project page: https://
+ziangcao0312.github.io/difftf_pages/. </p></div>
+    <br>
+
+       
 <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://github.com/vision4robotics/TCTrack">Towards Real-World Visual Tracking with Temporal Contexts</a> <br> <b>Ziang Cao</b>, Ziyuan Huang, Liang Pan, Shiwei Zhang, Ziwei Liu, Changhong Fu. <i>TPAMI</i>.  <br><button class="accordion"> 
       Abstract
     </button>
