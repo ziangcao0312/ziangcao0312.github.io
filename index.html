@@ -73,9 +73,9 @@
   <body>
     <div class="wrapper">
       <header>
-   <h3><img src="IMG_2409_edit_pro_photo_square_small.jpg" height="150" width="150" alt="Ziang Cao"></h3>
+   <h3><img src="IMG.jpg" height="150" width="150" alt="Ziang Cao"></h3>
         <h1>Ziang Cao</h1>
-        <p>Graduate student<br>Nanyang Technological University</p>
+        <p>Ph.D student<br>Nanyang Technological University</p>
     <h3><a href="https://ziangcao0312.github.io/research/CV.pdf">CV</a></h3>  
 
     <b>Social</b><br>
@@ -105,6 +105,8 @@
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We study heterogeneity in the effect of immigrant labor supply on native wages in the United States using quasi-experimental variation induced by the Immigration Act of 1990. The Act quickly and substantially increased the number of immigrant workers in STEM occupations. Using CPS data, we find short-run policy effects of reduced wages for more substitutable workers but increased wages for more complementary workers. We analyze long-term effects of the policy using administrative earnings data and find smaller long-run effects. </p></div><br>
 -->
+     <p style="margin:0"> <b>[Feb. 2025] One paper (<a href="https://3dtopia.github.io/3DTopia-XL/">3DTopia-XL</a>) is accepted by CVPR2025 as Highlight.</b> 
+     <p style="margin:0"> <b>[May. 2024] One paper (<a href="https://github.com/ziangcao0312/DiffTF">DiffTF++</a>) is accepted by TPAMI.</b> 
      <p style="margin:0"> <b>[Jan. 2024] One paper (<a href="https://ziangcao0312.github.io/difftf_pages/">DiffTF</a>) is accepted by ICLR.</b> 
      <p style="margin:0"> <b>[Aug. 2023] One paper (<a href="https://github.com/vision4robotics/TCTrack">TCTrack++</a> ) is accepted by TPAMI.</b> 
     <p style="margin:0"> <b>[Mar. 2022] Two papers (<a href="https://arxiv.org/abs/2203.01885">TCTrack</a> and <a href="https://ai4ce.github.io/EgoPAT3D/">EgoPAT3D</a>) are accepted by CVPR2022.</b> 
@@ -119,9 +121,28 @@
  <hr>
 
 
-
     <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Publications</h2>
  
+
+<p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/pdf/2409.12957.pdf">3DTopia-XL: Scaling High-quality 3D Asset Generation via Primitive Diffusion</a> <br> Zhaoxi Chen, Jiaxiang Tang, Yuhao Dong, <b>Ziang Cao</b>, Fangzhou Hong, Yushi Lan, Tengfei Wang, Haozhe Xie, Tong Wu, Shunsuke Saito, Liang Pan, Dahua Lin, Ziwei Liu. <i>CVPR</i>.  <br><button class="accordion"> 
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>The increasing demand for high-quality 3D assets across various industries necessitates efficient and automated 3D content creation. Despite recent advancements in 3D generative models, existing methods still face challenges with optimization speed, geometric fidelity, and the lack of assets for physically based rendering (PBR). In this paper, we introduce 3DTopia-XL, a scalable native 3D generative model designed to overcome these limitations. 3DTopia-XL leverages a novel primitive-based 3D representation, PrimX, which encodes detailed shape, albedo, and material field into a compact tensorial format, facilitating the modeling of high-resolution geometry with PBR assets. On top of the novel representation, we propose a generative framework based on Diffusion Transformer (DiT), which comprises 1) Primitive Patch Compression, 2) and Latent Primitive Diffusion. 3DTopia-XL learns to generate high-quality 3D assets from textual or visual inputs. We conduct extensive qualitative and quantitative experiments to demonstrate that 3DTopia-XL significantly outperforms existing methods in generating high-quality 3D assets with fine-grained textures and materials, efficiently bridging the quality gap between generative models and real-world applications. </p></div>
+    <br>
+
+
+
+
+<p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/pdf/2405.08055.pdf">DiffTF++: 3D-aware Diffusion Transformer for Large-Vocabulary 3D Generation</a> <br> <b>Ziang Cao</b>, Fangzhou Hong, Tong Wu, Liang Pan, Ziwei Liu. <i>TPAMI</i>.  <br><button class="accordion"> 
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>Generating diverse and high-quality 3D assets automatically poses a fundamental yet challenging task in 3D computer vision. Despite extensive efforts in 3D generation, existing optimization-based approaches struggle to produce large-scale 3D assets efficiently. Meanwhile, feed-forward methods often focus on generating only a single category or a few categories, limiting their generalizability. Therefore, we introduce a diffusion-based feed-forward framework to address these challenges with a single model. To handle the large diversity and complexity in geometry and texture across categories efficiently, we 1) adopt improved triplane to guarantee efficiency; 2) introduce the 3D-aware transformer to aggregate the generalized 3D knowledge with specialized 3D features; and 3) devise the 3D-aware encoder/decoder to enhance the generalized 3D knowledge. Building upon our 3D-aware Diffusion model with TransFormer, DiffTF, we propose a stronger version for 3D generation, i.e., DiffTF++. It boils down to two parts: multi-view reconstruction loss and triplane refinement. Specifically, we utilize multi-view reconstruction loss to fine-tune the diffusion model and triplane decoder, thereby avoiding the negative influence caused by reconstruction errors and improving texture synthesis. By eliminating the mismatch between the two stages, the generative performance is enhanced, especially in texture. Additionally, a 3D-aware refinement process is introduced to filter out artifacts and refine triplanes, resulting in the generation of more intricate and reasonable details. Extensive experiments on ShapeNet and OmniObject3D convincingly demonstrate the effectiveness of our proposed modules and the state-of-the-art 3D object generation performance with large diversity, rich semantics, and high quality. </p></div>
+    <br>
+
+
+
+
+  
 
 <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/pdf/2309.07920.pdf">Large-Vocabulary 3D Diffusion Model with Transformer</a> <br> <b>Ziang Cao</b>, Fangzhou Hong, Tong Wu, Liang Pan, Ziwei Liu. <i>ICLR</i>.  <br><button class="accordion"> 
       Abstract
