@@ -59,6 +59,25 @@
           padding-right: 5px; 
       }
 
+      .pub-wheel{
+
+        overflow-y: auto;
+
+
+        border-radius: 12px;
+        padding: 6px 6px;
+        scrollbar-width: thin;         /* Firefox */
+        -webkit-overflow-scrolling: touch;
+
+        scroll-snap-type: y mandatory;
+
+        max-height: 500px;
+      }
+
+      .pub-item{
+        scroll-snap-align: start;
+      }
+
       button.accordion {
       font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
       cursor: pointer;
@@ -125,7 +144,7 @@
       </header>
       <section>
     <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>About me</h2>
-    <p style="margin:0">Ziang Cao is currently a first-year PhD student in the College of Computer and Data Science in Nanyang Technological Unviersity, with <a href="https://www.mmlab-ntu.com/">MMLab@NTU</a>, supervised by <a href="https://liuziwei7.github.io/">Prof. Ziwei Liu</a>. His research interests lie on the computer vision, deep learning, and 3D generation. <br> 
+    <p style="margin:0">Ziang Cao is currently a Second-year PhD student in the College of Computer and Data Science in Nanyang Technological Unviersity, with <a href="https://www.mmlab-ntu.com/">MMLab@NTU</a>, supervised by <a href="https://liuziwei7.github.io/">Prof. Ziwei Liu</a>. His research interests lie on the computer vision, deep learning, and 3D generation. <br> 
    <h1> <h1>
  <hr>
 
@@ -135,6 +154,7 @@
 <h2><a id="works-in-progress" class="anchor" href="#workinprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>News</h2>
 
 <div id="news-container">
+   <p style="margin:0"> <b>[Feb. 2026] One paper (<a href="https://physx-anything.github.io/">PhysX-Anything</a>) is accepted by CVPR 2026.</b> 
     <p style="margin:0"> <b>[Oct. 2025] I am awarded <a href="https://research.google/programs-and-events/phd-fellowship/recipients/">Google PhD Fellowship 2025</a> (Machine Perception).</b> 
     <p style="margin:0"> <b>[Sep. 2025] One paper (<a href="https://physx-3d.github.io/">PhysX-3D</a>) is accepted by NeurIPS 2025 as <span style="color:red;">Spotlight</span>.</b> 
     <p style="margin:0"> <b>[Feb. 2025] One paper (<a href="https://3dtopia.github.io/3DTopia-XL/">3DTopia-XL</a>) is accepted by CVPR2025 as <span style="color:red;">Highlight</span>.</b> 
@@ -156,10 +176,52 @@
 
     <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selected Publications</h2>
  
+    <div class="pub-wheel" data-visible="3">
 
+    <div class="pub-item" style="display:flex; align-items:flex-start; margin:0;">
 
+      <div style="margin-right:15px;">
+        <img src="research/img/physx-anything.jpg" alt="PhysX-Anything" style="width:320px; border-radius:8px;">
+      </div>
+    
+      <div>
+        <p style="margin:0">
+          <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/abs/2511.13648">
+            PhysX-3D: Physical-Grounded 3D Asset Generation
+          </a> <br>
+          <b>Ziang Cao</b>, Fangzhou Hong, Zhaoxi Chen, Liang Pan, Ziwei Liu. <i>CVPR 2026</i>.  
+          <br>
+          <button class="accordion">Abstract</button>
+          <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+            <p>
+              3D modeling is shifting from static visual representations toward physical, articulated assets that can be directly
+                used in simulation and interaction. However, most existing
+                3D generation methods overlook key physical and articulation properties, thereby limiting their utility in embodied AI. To bridge this gap, we introduce PhysX-Anything,
+                the first simulation-ready physical 3D generative framework that, given a single in-the-wild image, produces high-quality sim-ready 3D assets with explicit geometry, articulation, and physical attributes. Specifically, we propose
+                the first VLM-based physical 3D generative model, along
+                with a new 3D representation that efficiently tokenizes geometry. It reduces the number of tokens by 193x, enabling explicit geometry learning within standard VLM to-
+                ken budgets without introducing any special tokens during
+                fine-tuning and significantly improving generative quality.
+                In addition, to overcome the limited diversity of existing
+                physical 3D datasets, we construct a new dataset, PhysX-Mobility, which expands the object categories in prior phys-
+                ical 3D datasets by over 2x and includes more than 2K
+                common real-world objects with rich physical annotations.
+                Extensive experiments on PhysX-Mobility and in-the-wild
+                images demonstrate that PhysX-Anything delivers strong
+                generative performance and robust generalization. Furthermore, simulation-based experiments in a MuJoCo-style
+                environment validate that our sim-ready assets can be di-
+                rectly used for contact-rich robotic policy learning. We believe PhysX-Anything can substantially empower a broad
+                range of downstream applications, especially in embodied
+                AI and physics-based simulation
+            </p>
+          </div>
+        </p>
+      </div>
+    </div>
 
-<div style="display:flex; align-items:flex-start; margin:0;">
+    <br>
+
+    <div class="pub-item" style="display:flex; align-items:flex-start; margin:0;">
 
   <div style="margin-right:15px;">
     <img src="research/img/physx.png" alt="PhysX-3D" style="width:320px; border-radius:8px;">
@@ -170,7 +232,7 @@
       <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/abs/2507.12465">
         PhysX-3D: Physical-Grounded 3D Asset Generation
       </a> <br>
-      <b>Ziang Cao</b>, Zhaoxi Chen, Liang Pan, Ziwei Liu. <i>NeurIPS, <span style="color:red;">Spotlight</span></i>.  
+      <b>Ziang Cao</b>, Zhaoxi Chen, Liang Pan, Ziwei Liu. <i>NeurIPS 2025, <span style="color:red;">Spotlight</span></i>.  
       <br>
       <button class="accordion">Abstract</button>
       <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
@@ -188,10 +250,10 @@
 
 
 
-<div style="display:flex; align-items:flex-start; margin:10px 0;">
+<!-- <div class="pub-item" style="display:flex; align-items:flex-start; margin:0;">
 
   <div style="margin-right:15px;">
-    <img src="research/img/3dtopia.webp" alt="3dtopia" style="width:780px; border-radius:8px; margin-top:30px;">
+    <img src="research/img/3dtopia.webp" alt="3dtopia" style="width:780px; border-radius:8px; margin-top:7px;">
   </div>
 
   <div>
@@ -205,11 +267,11 @@
       </div>
     </p>
   </div>
-</div>
+</div> -->
 
 
 
-<div style="display:flex; align-items:flex-start; margin:10px 0;">
+<div class="pub-item" style="display:flex; align-items:flex-start; margin:0;">
 
   <div style="margin-right:15px;">
     <img src="research/img/difftf++.png" alt="difftf++" style="width:370px; border-radius:8px; margin-top:0px;">
@@ -234,14 +296,14 @@
 
 
 
-  <div style="display:flex; align-items:flex-start; margin:10px 0;">
+<div class="pub-item" style="display:flex; align-items:flex-start; margin:0;">
 
   <div style="margin-right:15px;">
-    <img src="research/img/difftf.png" alt="difftf" style="width:320px; border-radius:8px; margin-top:-6px;">
+    <img src="research/img/difftf.png" alt="difftf" style="width:320px; border-radius:8px; margin-top:0px;">
   </div>
 
   <div>
-   <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/pdf/2309.07920.pdf">Large-Vocabulary 3D Diffusion Model with Transformer</a> <br> <b>Ziang Cao</b>, Fangzhou Hong, Tong Wu, Liang Pan, Ziwei Liu. <i>ICLR</i>.  <br><button class="accordion"> 
+   <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/pdf/2309.07920.pdf">Large-Vocabulary 3D Diffusion Model with Transformer</a> <br> <b>Ziang Cao</b>, Fangzhou Hong, Tong Wu, Liang Pan, Ziwei Liu. <i>ICLR 2024</i>.  <br><button class="accordion"> 
       Abstract
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>Creating diverse and high-quality 3D assets with an automatic generative model is
@@ -278,7 +340,7 @@ ziangcao0312.github.io/difftf_pages/.
 
 
 
-  <div style="display:flex; align-items:flex-start; margin:10px 0;">
+<div class="pub-item" style="display:flex; align-items:flex-start; margin:0;">
 
   <div style="margin-right:15px;">
     <img src="research/img/tctrack++.png" alt="tctrack++" style="width:370px; border-radius:8px; margin-top:0px;">
@@ -306,18 +368,18 @@ real-world applications.
   </div>
 </div>
 
-       
+  
 
 
 
-  <div style="display:flex; align-items:flex-start; margin:10px 0;">
+<div class="pub-item" style="display:flex; align-items:flex-start; margin:0;">
 
   <div style="margin-right:15px;">
-    <img src="research/img/ego.png" alt="ego" style="width:600px; border-radius:8px; margin-top:30px;">
+    <img src="research/img/ego.png" alt="ego" style="width:600px; border-radius:8px; margin-top:10px;">
   </div>
 
   <div>
-   <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://ai4ce.github.io/EgoPAT3D/">Egocentric Prediction of Action Target in 3D</a> <br> Yiming Li*,<b>Ziang Cao*</b>, Andrew Liang, Benjamin Liang, Luoyao Chen, Hang Zhao, Chen Feng. <i>CVPR2022</i>, <b>* denotes equal contribution</b>.  <br><button class="accordion"> 
+   <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://ai4ce.github.io/EgoPAT3D/">Egocentric Prediction of Action Target in 3D</a> <br> Yiming Li*,<b>Ziang Cao*</b>, Andrew Liang, Benjamin Liang, Luoyao Chen, Hang Zhao, Chen Feng. <i>CVPR 2022</i>, <b>* denotes equal contribution</b>.  <br><button class="accordion"> 
       Abstract
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>We are interested in anticipating as early as possible the target location of a person's object manipulation action in a 3D workspace from egocentric vision. It is important in fields like human-robot collaboration, but has not yet received enough attention from vision and learning communities. To stimulate more research on this challenging egocentric vision task, we propose a large multi-modal dataset of more than 1 million frames of RGBD and IMU streams, and provide evaluation metrics based on our high-quality 2D and 3D labels from semi-automatic annotation. Meanwhile, we design baseline methods using recurrent neural networks (RNNs) and conduct various ablation studies to validate their effectiveness. Our results demonstrate that this new task is worthy of further study by researchers in robotics, vision, and learning communities.
@@ -329,14 +391,14 @@ real-world applications.
 
     
 
-  <div style="display:flex; align-items:flex-start; margin:10px 0;">
+<div class="pub-item" style="display:flex; align-items:flex-start; margin:0;">
 
   <div style="margin-right:15px;">
     <img src="research/img/tctrack.png" alt="tctrack" style="width:390px; border-radius:8px; margin-top:05px;">
   </div>
 
   <div>
-       <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/abs/2203.01885">TCTrack: Temporal Contexts for Aerial Tracking</a> <br> <b>Ziang Cao</b>, Ziyuan Huang, Liang Pan, Shiwei Zhang, Ziwei Liu, Changhong Fu. <i>CVPR2022</i>.  <br><button class="accordion"> 
+       <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/abs/2203.01885">TCTrack: Temporal Contexts for Aerial Tracking</a> <br> <b>Ziang Cao</b>, Ziyuan Huang, Liang Pan, Shiwei Zhang, Ziwei Liu, Changhong Fu. <i>CVPR 2022</i>.  <br><button class="accordion"> 
       Abstract
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>Temporal contexts among consecutive frames are far from being fully utilized in existing visual trackers. In this work, we present TCTrack, a comprehensive framework to fully exploit temporal contexts for aerial tracking. The temporal contexts are incorporated at \textbf{two levels}: the extraction of \textbf{features} and the refinement of \textbf{similarity maps}. Specifically, for feature extraction, an online temporally adaptive convolution is proposed to enhance the spatial features using temporal information, which is achieved by dynamically calibrating the convolution weights according to the previous frames. For similarity map refinement, we propose an adaptive temporal transformer, which first effectively encodes temporal knowledge in a memory-efficient way, before the temporal knowledge is decoded for accurate adjustment of the similarity map. TCTrack is effective and efficient: evaluation on four aerial tracking benchmarks shows its impressive performance; real-world UAV tests show its high speed of over 27 FPS on NVIDIA Jetson AGX Xavier. 
@@ -347,14 +409,14 @@ real-world applications.
 </div>
 
 
-   <div style="display:flex; align-items:flex-start; margin:10px 0;">
+<div class="pub-item" style="display:flex; align-items:flex-start; margin:0;">
 
   <div style="margin-right:15px;">
     <img src="research/img/hift.png" alt="hift" style="width:320px; border-radius:8px; margin-top:15px;">
   </div>
 
   <div>
-        <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://openaccess.thecvf.com/content/ICCV2021/html/Cao_HiFT_Hierarchical_Feature_Transformer_for_Aerial_Tracking_ICCV_2021_paper.html">HiFT: Hierarchical Feature Transformer for Aerial Tracking</a> <br> <b>Ziang Cao</b>, Changhong Fu, Junjie Ye, Bowen Li, Yiming Li. <i>ICCV2021</i>.  <br><button class="accordion"> 
+        <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://openaccess.thecvf.com/content/ICCV2021/html/Cao_HiFT_Hierarchical_Feature_Transformer_for_Aerial_Tracking_ICCV_2021_paper.html">HiFT: Hierarchical Feature Transformer for Aerial Tracking</a> <br> <b>Ziang Cao</b>, Changhong Fu, Junjie Ye, Bowen Li, Yiming Li. <i>ICCV 2021</i>.  <br><button class="accordion"> 
       Abstract
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>Most existing Siamese-based tracking methods execute the classification and regression of the target object based on the similarity maps. However, they either employ a single map from the last convolutional layer which degrades the localization accuracy in complex scenarios or separately use multiple maps for decision making, introducing intractable computations for aerial mobile platforms. Thus, in this work, we propose an efficient and effective hierarchical feature transformer (HiFT) for aerial tracking. Hierarchical similarity maps generated by multi-level convolutional layers are fed into the feature transformer to achieve the interactive fusion of spatial (shallow layers) and semantics cues (deep layers). Consequently, not only the global contextual information can be raised, facilitating the target search, but also our end-to-end architecture with the transformer can efficiently learn the interdependencies among multi-level features, thereby discovering a tracking-tailored feature space with strong discriminability. Comprehensive evaluations on four aerial benchmarks have proven the effectiveness of HiFT. Real-world tests on the aerial platform have strongly validated its practicability with a real-time speed. Our code is available at https://github.com/vision4robotics/HiFT. 
@@ -364,7 +426,7 @@ real-world applications.
   </div>
 </div>
 
-
+</div>    
     
 
 <h1> <h1>
